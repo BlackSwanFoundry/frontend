@@ -1,8 +1,8 @@
 <template>
-  <div>
     <Header />
     <Nav />
-    <slot />
+    <section class="app">
+          <slot />
+    </section>
     <Footer />
-  </div>
 </template>

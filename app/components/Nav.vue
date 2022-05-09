@@ -1,9 +1,8 @@
 <template>
-<nav>
-    <ul class="menu">
-        <li class="menu-item">
-            <a href="">[TEST LINK]</a>
-        </li>
-    </ul>
-</nav>
+<b-nav>
+    <b-nav-item>Home</b-nav-item>
+    <b-nav-item>Tokenizer</b-nav-item>
+    <b-nav-item>Surety</b-nav-item>
+    <b-nav-item>White Papers</b-nav-item>
+</b-nav>
 </template>
