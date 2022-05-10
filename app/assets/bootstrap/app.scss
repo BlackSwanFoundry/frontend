@@ -1,0 +1,17 @@
+@import "bootstrap/scss/bootstrap";
+
+body {
+	position: relative;
+}
+
+.app {
+	margin-bottom: 250px;
+}
+
+.footer {
+	position: absolute;
+	width: 100%;
+	min-height: 250px;
+	bottom: 40px;
+	left: 0;
+}

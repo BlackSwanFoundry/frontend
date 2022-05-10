@@ -1,8 +1,29 @@
 <template>
-<b-nav>
-    <b-nav-item>Home</b-nav-item>
-    <b-nav-item>Tokenizer</b-nav-item>
-    <b-nav-item>Surety</b-nav-item>
-    <b-nav-item>White Papers</b-nav-item>
-</b-nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">BSF</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Escrow</a>
+                </li>
+                <li class="nav-item">
+                    <nuxt-link class="nav-link" to="/tokenizer">Tokenizer</nuxt-link>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Surety</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">White Papers</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 </template>

@@ -1,8 +1,7 @@
 <template>
-    <Header />
     <Nav />
     <section class="app">
-          <slot />
+        <slot />
     </section>
-    <Footer />
+    <!-- <Footer /> -->
 </template>
