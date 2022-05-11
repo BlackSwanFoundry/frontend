@@ -1,4 +1,4 @@
-const LiquidToken = artifacts.require("LiquidToken");
+//const LiquidToken = artifacts.require("LiquidToken");
 
 /*
  * uncomment accounts to access the test accounts made available by the
@@ -7,7 +7,7 @@ const LiquidToken = artifacts.require("LiquidToken");
  */
 contract("LiquidToken", function (/* accounts */) {
   it("should assert true", async function () {
-    await LiquidToken.deployed();
+    //await LiquidToken.deployed();
     return assert.isTrue(true);
   });
 });

@@ -1,7 +1,7 @@
 const BasicTokenName = "BSF Basic";
 const BasicTokenSymbol = "BSFB";
 const BasicTokenDecimals = 9;
-const BasicTokenSupply = 1 * 10 ^ 18;
+const BasicTokenSupply = 1 * 10 ** 10;
 const Accounts = [
     "0x8e6ce9b0a372d567a23e10cee6165012504d72b8",
     "0x57f9b85e8725688a798c09fd8dc06aab027cfa82",

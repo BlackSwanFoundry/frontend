@@ -1,6 +1,5 @@
 const BasicToken = artifacts.require("BasicToken");
 const Constants = require( "../consts.js");
-const BN = require("bn.js");
 
 /*
  * uncomment accounts to access the test accounts made available by the
@@ -40,5 +39,29 @@ contract("BasicToken", function (accounts) {
     const instance = await BasicToken.deployed();
     const ownerBalance = await instance.balanceOf.call(contractOwner);
     return assert.isTrue(ownerBalance.toNumber() == Constants.basicTokenSupply, "Basic Token Initial Ownership is incorrect.");
-  })
+  });
+
+  it("Transfer Token to Address", async function(){
+    const instance = await BasicToken.deployed();
+    const amount = 1000;
+    const result = await instance.transfer.call(alice,amount, {from: contractOwner});
+    console.log(result);
+    // const ownerBalance = await instance.balanceOf.call(contractOwner);
+    // const aliceBalance = await instance.balanceOf.call(alice);
+    // const one = assert.IsTrue(ownerBalance.toNumber() === Constants.basicTokenSupply - 1000, "Owner balance is incorrect.");
+    // const two = assert.IsTrue(aliceBalance.toNumber() === 1000, "Alice balance is incorrect.");
+    //return result && one && two;
+  });
+
+  // it("Transfer Token to Address", async function(){
+  //   const instance = await BasicToken.deployed();
+  //   const amount = 1000;
+  //   const result = await instance.transfer.call(alice,amount);
+  //   const ownerBalance = await instance.balanceOf.call(contractOwner);
+  //   const aliceBalance = await instance.balanceOf.call(alice);
+  //   const one = assert.IsTrue(ownerBalance.toNumber() === Constants.basicTokenSupply - 1000, "Owner balance is incorrect.");
+  //   const two = assert.IsTrue(aliceBalance.toNumber() === 1000, "Alice balance is incorrect.");
+  //   return result && one && two;
+  // });
+
 });

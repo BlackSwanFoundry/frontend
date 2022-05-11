@@ -1,19 +1,25 @@
 <template>
-    <section class="card ml-5 mr-2 mt-2">
+    <section class="card ml-3">
         <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
             <form
             accept-charset="UTF-8"
-            v-on:submit.prevent="onSave()"
+            v-on:submit.prevent="onSave"
             method="POST">
-                <fieldset class="form-group">
-                    <label>Token Name</label>
-                    <input
-                        type="text"
-                        v-model="name"
-                        class="form-control"
-                        placeholder="Token Name.."/>
-                </fieldset>
+            <fieldset class="form-group">
+                <select class="form-control" v-model="tokenType" @change="onTypeChange($event)">
+                    <option value="" selected disabled>Choose</option>
+                    <option v-for="token in types" :value="token.id" :key="token.id">{{ token.name }}</option>
+                </select>
+            </fieldset>
+            <fieldset class="form-group">
+                <label>Token Name</label>
+                <input
+                    type="text"
+                    v-model="name"
+                    class="form-control"
+                    placeholder="Token Name.."/>
+            </fieldset>
             <fieldset class="form-group">
                 <label>Decimals</label>
                 <input
@@ -33,7 +39,6 @@
                     required="required"/>
             </fieldset>
             <hr>
-            <div class="success" v-if="isSuccess">We received your submission, thank you!</div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
         </div>
@@ -41,7 +46,7 @@
 </template>
 
 <script>
-    import web3 from "web3"
+    // import web3 from "web3"
 
     export default{
         name: "ERC20Form",
@@ -52,7 +57,10 @@
                 name: "",
                 decimals: 0,
                 total: 0,
-                isSuccess: false
+                isSuccess: false,
+                types: [{id:1,name:"Basic Token"}, {id:2,name:"Liquidity Token"}],
+                tokenType: null,
+                liquidity: false
             };
         },
         methods: {
@@ -64,6 +72,12 @@
                 };
 
                 // Do web3 things.
+            },
+            onTypeChange(event){
+                console.log(event);
+                console.log(event.target);
+                let t = event.target[event.target.options.selectedIndex];
+                console.log(t);
             }
         }
     }

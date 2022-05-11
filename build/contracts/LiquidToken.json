@@ -1,0 +1,117 @@
+{
+  "contractName": "LiquidToken",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/LiquidToken.sol\":\"LiquidToken\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/LiquidToken.sol\":{\"keccak256\":\"0x41e96f812dd30ce87e5f49a57742670f275e21a8516802d4d4af4fc583a558e3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7976ebff1e18aaaf81825183601479a178984e99c0c821e644ad5338af99694e\",\"dweb:/ipfs/QmShPpf2BaevNs6sHB8txgD4qTzNWVdYf3qbvntXH7iJyF\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220439cb1761df0996b0cce3d1f05bfa51ee2e3b69584e2be30a88f72cd9be5dac064736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220439cb1761df0996b0cce3d1f05bfa51ee2e3b69584e2be30a88f72cd9be5dac064736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "69:56:1:-:0;;;95:27;;;;;;;;;;69:56;;;;;;",
+  "deployedSourceMap": "69:56:1:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract LiquidToken {\r\n  constructor() public {\r\n  }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\dalton.brady\\Documents\\GitHub\\frontend\\contracts\\LiquidToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/LiquidToken.sol",
+    "exportedSymbols": {
+      "LiquidToken": [
+        63
+      ]
+    },
+    "id": 64,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "LiquidToken",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 63,
+        "linearizedBaseContracts": [
+          63
+        ],
+        "name": "LiquidToken",
+        "nameLocation": "78:11:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 61,
+              "nodeType": "Block",
+              "src": "116:6:1",
+              "statements": []
+            },
+            "id": 62,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:2:1"
+            },
+            "returnParameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "116:0:1"
+            },
+            "scope": 63,
+            "src": "95:27:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 64,
+        "src": "69:56:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:94:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-11T02:58:53.377Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
