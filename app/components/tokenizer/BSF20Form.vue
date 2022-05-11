@@ -1,7 +1,9 @@
 <template>
     <section class="card ml-3">
-        <div class="card-body">
+        <div class="card-header">
             <h5 class="card-title">{{title}}</h5>
+        </div>
+        <div class="card-body">
             <form
             accept-charset="UTF-8"
             v-on:submit.prevent="onSave"
@@ -39,6 +41,18 @@
                     required="required"/>
             </fieldset>
             <hr>
+            <fieldset class="form-group" v-show="liquidity">
+                <h5>Liquidity Router</h5>
+                <select class="form-control" v-model="liquidityRouter" @change="onRouterChange($event)">
+                    <option value="" selected disabled>Choose</option>
+                    <option v-for="router in routers" :value="router.id" :key="router.id">{{ router.name }}</option>
+                </select>
+                <br/>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+            </fieldset>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
         </div>
@@ -59,8 +73,10 @@
                 total: 0,
                 isSuccess: false,
                 types: [{id:1,name:"Basic Token"}, {id:2,name:"Liquidity Token"}],
-                tokenType: null,
-                liquidity: false
+                tokenType: {id:1, name:"Basic Token"},
+                liquidity: false,
+                liquidityRouter: {id:1, },
+                routers: [{id:1,name:"BSFSwap"},{id:2,name:"PancakeSwap"}]
             };
         },
         methods: {
@@ -74,10 +90,12 @@
                 // Do web3 things.
             },
             onTypeChange(event){
-                console.log(event);
-                console.log(event.target);
-                let t = event.target[event.target.options.selectedIndex];
-                console.log(t);
+                let t = event.target[event.target.options.selectedIndex].value;
+                if(t === "2"){
+                    this.liquidity = true;
+                }else{
+                    this.liquidity = false;
+                }
             }
         }
     }

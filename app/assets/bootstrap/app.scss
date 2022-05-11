@@ -6,6 +6,8 @@ body {
 
 .app {
 	margin-bottom: 250px;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
 }
 
 .footer {
@@ -14,4 +16,8 @@ body {
 	min-height: 250px;
 	bottom: 40px;
 	left: 0;
+}
+
+.card-header {
+	border-bottom: 0.05em solid #e2e2e2;
 }
