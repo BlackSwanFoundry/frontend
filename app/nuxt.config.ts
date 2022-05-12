@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
-
+const path = require("path");
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     // Global page headers: https://go.nuxtjs.dev/config-head
@@ -17,16 +17,14 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ],
-        
       script: [
-        {
-          src: '/bootstrap.bundle.min.js',
-        }
+        {src:'~/bootstrap.bundle.min.js'},
+        {src:'~/web3.min.js'}
       ],
     },
-  
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: [ { src: '~/assets/bootstrap/app.scss', lang: 'sass'} 
+    css: [ 
+      {src:'~/assets/bootstrap/app.scss'},
     ],
   
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -46,7 +44,6 @@ export default defineNuxtConfig({
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
     ],
-  
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
     }
