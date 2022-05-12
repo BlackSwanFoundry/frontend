@@ -76,10 +76,6 @@
 </template>
 
 <script>
-    import {require} from 'require'
-    const Web3 = require("web3");
-    let web3 = new Web3('http://localhost:9545');
-
     export default {
         name: "BSF20Form",
         props: {
@@ -118,8 +114,6 @@
                     liquidity: this.liquidity,
                     router: this.router
                 };
-
-                console.log(web3.eth.accounts)
 
                 if(data.type === "0"){
                     this.message = "Invalid token type selected.";

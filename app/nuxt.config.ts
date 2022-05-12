@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
-const path = require("path");
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     // Global page headers: https://go.nuxtjs.dev/config-head
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     },
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [ 
-      {src:'~/assets/bootstrap/app.scss'},
+      '@/assets/bootstrap/app.scss',
     ],
   
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
